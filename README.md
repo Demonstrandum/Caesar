@@ -8,7 +8,7 @@ Then run the make file by typing: `make`<br />
 Then `make install`, you might need to do `sudo make install`<br />
 You must have `/usr/local/bin/` in your `$PATH` variable in your shell.
 
-### Use it:
+### Usage:
 `caesar <shift (int)> <input type(text or file)> <input (filename or just the text)>`
 1. The first argument is an integer, the rotation (how many letters to shift by)
 2. The second argument is how to get the input, either by `text` or from a `file`
