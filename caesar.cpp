@@ -53,6 +53,7 @@ int main(int argc, char** argv) {
   }
   else {
     cout << "Enter valid arguments." << endl;
+    return 1;
   }
   cout << rot(rotation, content);
   return 0;
