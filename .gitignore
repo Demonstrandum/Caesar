@@ -12,3 +12,6 @@ Thumbs.db
 
 # bin
 caesar
+
+# text files
+*.txt
