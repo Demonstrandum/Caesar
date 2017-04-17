@@ -5,7 +5,7 @@ DEST = /usr/local/bin
 all: $(TARGET)
 $(TARGET): $(TARGET).cpp
 	# Creating binary...
-		$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).cpp
+	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).cpp
 
 install:
 	# Copying $(TARGET) to $(DEST)...
