@@ -14,7 +14,7 @@ You must have `/usr/local/bin/` in your `$PATH` variable in your shell.
 2. The second argument is how to get the input, either by `text` or from a `file`.
 3. The third argument is either the filename, if you chose `file` for the previous argument or the text you want to encrypt (in quote marks if it contains spaces or special characters).
 
-For example, encrypting the word 'hello':
+For example, encrypting the the alphabet demonstrates what this program does. It shifts the letters in the alphabet over to make the text not immediately recognisable. However the following example shows clearly what it does:
 ```shell
 caesar 1 text abcdefghijklmnopqrstuvwxyz
 ```
