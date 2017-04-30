@@ -22,7 +22,7 @@ Should yield `bcdefghijklmnopqrstuvwxyza`
 
 And
 ```shell
-caesar 4 text "Hello, World!"
+caesar 3 text "Hello, World!"
 ```
 Gives `khoor, zruog!`
 ```shell
@@ -35,7 +35,7 @@ Both yield `This command is useless`
 
 You can also read from a file for larger translations:
 ```shell
-caesar 3 file myfile.txt
+caesar 4 file myfile.txt
 ```
 This command will translate the contents of `myfile.txt` (supports any file format not just `.txt`) and puts it in the terminal.</br>
 To instead put this in another file (creates a new file if it doesn't already exist), type:
