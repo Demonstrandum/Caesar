@@ -5,7 +5,7 @@
 using namespace std;
 
 bool IsInArray(string array, char element) {
-  for(int i = 0; i < array.length(); i++){
+  for(unsigned int i = 0; i < array.length(); i++){
      if(array[i] == element){
          return true;
      }
@@ -18,8 +18,8 @@ string rot(int n, string str) {
   string ciph = alph;
   rotate(ciph.begin(), ciph.begin() + n, ciph.end());
 
-  int i = 0;
-  int j = 0;
+  unsigned int i = 0;
+  unsigned int j = 0;
   while (i < str.length()) {
     if (IsInArray(alph, str[i])) {
       if (str[i] == alph[j]) {
