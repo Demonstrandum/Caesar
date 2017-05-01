@@ -61,4 +61,4 @@ so to decrypt it:
 caesar -7 text "Kljyfwa tl."
 ```
 Which will give `Decrypt me.`
-Same for the decrypting a negative rotation encryption, e.g. to decrypt a -12 rotation rotate by 12 to decrypt.
+Same for the decryption of a negative rotation encryption, e.g. to decrypt a -12 rotation, rotate by 12 to decrypt.
