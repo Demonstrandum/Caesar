@@ -11,8 +11,8 @@ Then `make install`, you might need to do `sudo make install`<br />
 You must have `/usr/local/bin/` in your `$PATH` variable in your shell.
 
 ### Usage:
-`caesar <shift (int)> <input type(text or file)> <input (filename or just the text)>`
-1. The first argument is an integer, the rotation (how many letters to shift by).
+`caesar <shift (int out of 26)> <input type(text or file)> <input (filename or just the text)>`
+1. The first argument is an integer, the rotation (how many letters to shift by) in the alphabet so naturally the max integer is 26.
 2. The second argument is how to get the input, either by `text` or from a `file`.
 3. The third argument is either the filename, if you chose `file` for the previous argument or the text you want to encrypt (in quote marks if it contains spaces or special characters).
 
