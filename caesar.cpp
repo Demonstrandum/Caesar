@@ -14,6 +14,12 @@ bool IsInString(string str, char element) {
 }
 
 string rot(int n, string str) {
+  if (n > 26 || n < -26) {
+    return "\nRotation integer out of range!\nPlease choose a number between -26 and 26!\n";
+  }
+  if (n < 0) {
+    n += 26;
+  }
   string alph = "abcdefghijklmnopqrstuvwxyz";
   string ciph = alph;
   rotate(ciph.begin(), ciph.begin() + n, ciph.end());
