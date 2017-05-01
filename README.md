@@ -12,15 +12,21 @@ You must have `/usr/local/bin/` in your `$PATH` variable in your shell.
 
 ### Usage:
 `caesar <shift (int)> <input type(text or file)> <input (filename or just the text)>`
-1. The first argument is an integer, the rotation (how many letters to shift by)
-2. The second argument is how to get the input, either by `text` or from a `file`
-3. The third argument is either the filename, if you chose `file` for the previous argument or the text you want to encrypt (in quote marks if it contains spaces or special characters.)
+1. The first argument is an integer, the rotation (how many letters to shift by).
+2. The second argument is how to get the input, either by `text` or from a `file`.
+3. The third argument is either the filename, if you chose `file` for the previous argument or the text you want to encrypt (in quote marks if it contains spaces or special characters).
 
-For example, encrypting the word 'hello':
+For example, encrypting the the alphabet demonstrates what this program does. It shifts the letters in the alphabet over to make the text not immediately recognisable. However the following example shows clearly what it does:
 ```shell
-caesar 4 text hello
+caesar 1 text abcdefghijklmnopqrstuvwxyz
 ```
-Should yield `lipps`
+Should yield `bcdefghijklmnopqrstuvwxyza`
+
+And
+```shell
+caesar 3 text "Hello, World!"
+```
+Gives `khoor, zruog!`
 ```shell
 caesar 0 text "This command is useless."
 ```
@@ -31,10 +37,10 @@ Both yield `This command is useless.`
 
 You can also read from a file for larger translations:
 ```shell
-caesar 3 file myfile.txt
+caesar 4 file myfile.txt
 ```
 This command will translate the contents of `myfile.txt` (supports any file format not just `.txt`) and puts it in the terminal.</br>
-To put this in another file (it will create a new file if it doesn't already exist), type:
+To instead put this in another file (creates a new file if it doesn't already exist), type:
 ```shell
 caesar 8 file normaltext.x > encryptedtext.y
 ```

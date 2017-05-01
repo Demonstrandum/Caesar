@@ -5,13 +5,14 @@
 using namespace std;
 
 bool IsInString(string str, char element) {
-  for(int i = 0; i < str.length(); i++){
+  for(unsigned int i = 0; i < str.length(); i++){
      if(str[i] == element){
          return true;
      }
   }
   return false;
 }
+
 string rot(int n, string str) {
   string alph = "abcdefghijklmnopqrstuvwxyz";
   string ciph = alph;
@@ -22,8 +23,9 @@ string rot(int n, string str) {
   transform(upperAlph.begin(), upperAlph.end(), upperAlph.begin(), ::toupper);
   transform(upperCiph.begin(), upperCiph.end(), upperCiph.begin(), ::toupper);
 
-  int i = 0;
-  int j = 0;
+  unsigned int i = 0;
+  unsigned int j = 0;
+
   while (i < str.length()) {
     if (IsInString(alph, str[i]) || IsInString(upperAlph, str[i])) {
       if (str[i] == alph[j]) {
