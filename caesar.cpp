@@ -4,26 +4,35 @@
 
 using namespace std;
 
-bool IsInArray(string array, char element) {
-  for(int i = 0; i < array.length(); i++){
-     if(array[i] == element){
+bool IsInString(string str, char element) {
+  for(int i = 0; i < str.length(); i++){
+     if(str[i] == element){
          return true;
      }
   }
   return false;
 }
 string rot(int n, string str) {
-  transform(str.begin(), str.end(), str.begin(), ::tolower);
   string alph = "abcdefghijklmnopqrstuvwxyz";
   string ciph = alph;
   rotate(ciph.begin(), ciph.begin() + n, ciph.end());
 
+  string upperAlph = alph;
+  string upperCiph = ciph;
+  transform(upperAlph.begin(), upperAlph.end(), upperAlph.begin(), ::toupper);
+  transform(upperCiph.begin(), upperCiph.end(), upperCiph.begin(), ::toupper);
+
   int i = 0;
   int j = 0;
   while (i < str.length()) {
-    if (IsInArray(alph, str[i])) {
+    if (IsInString(alph, str[i]) || IsInString(upperAlph, str[i])) {
       if (str[i] == alph[j]) {
         str[i] = ciph[j];
+        i++;
+        j = 0;
+      }
+      else if (str[i] == upperAlph[j]) {
+        str[i] = upperCiph[j];
         i++;
         j = 0;
       }
@@ -39,6 +48,9 @@ string rot(int n, string str) {
 }
 
 int main(int argc, char** argv) {
+  if (argc < 4) {
+    cout << "Please supply a valid number of arguments." << endl;
+  }
   string content;
   string strRotation = argv[1];
   int rotation = atoi(strRotation.c_str());
@@ -52,7 +64,7 @@ int main(int argc, char** argv) {
                     (istreambuf_iterator<char>()    ) );
   }
   else {
-    cout << "Enter valid arguments." << endl;
+    cout << "Please choose a way of retrieving the input (text or file)." << endl;
     return 1;
   }
   cout << rot(rotation, content);
