@@ -1,6 +1,8 @@
 # Caesar
 Simple Caesar/rot cipher written in C++
 
+Translates any text given (latin alphabet only) from a command line argument or from a file. Supports and keeps whitespace formatting (tabs, spaces, etc...) as well as special characters (punctuation and such), and guards the capitalisation/case of the letters.
+
 ### Installation:
 In your terminal, clone and cd into the repository:<br />
 `git clone https://github.com/Demonstrandum/Caesar && cd Caesar`<br />
@@ -25,7 +27,7 @@ caesar 0 text "This command is useless."
 ```shell
 caesar 26 text "This command is useless."
 ```
-Both yield `This command is useless`
+Both yield `This command is useless.`
 
 You can also read from a file for larger translations:
 ```shell
