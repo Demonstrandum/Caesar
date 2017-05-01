@@ -12,7 +12,7 @@ You must have `/usr/local/bin/` in your `$PATH` variable in your shell.
 
 ### Usage:
 `caesar <shift (int out of 26)> <input type(text or file)> <input (filename or just the text)>`
-1. The first argument is an integer, the rotation (how many letters to shift by) in the alphabet so naturally the max integer is 26.
+1. The first argument is an integer, the rotation (how many letters to shift by) in the alphabet so naturally the range for the integer size is between -26 and 26.
 2. The second argument is how to get the input, either by `text` or from a `file`.
 3. The third argument is either the filename, if you chose `file` for the previous argument or the text you want to encrypt (in quote marks if it contains spaces or special characters).
 
@@ -26,7 +26,7 @@ And
 ```shell
 caesar 3 text "Hello, World!"
 ```
-Gives `khoor, zruog!`
+Gives `Khoor, Zruog!`
 ```shell
 caesar 0 text "This command is useless."
 ```
@@ -49,3 +49,16 @@ Same can be done for `text`:
 ```shell
 caesar 19 text "Some piece of text..." > ciphered.txt
 ```
+### Decryption
+To decrypt and encrypted message do the opposite if the encryption, so if the rotation for an encrypted message was 7 then to decrypt it rotate by -7.
+e.g.
+```shell
+caesar 7 text "Decrypt me."
+```
+Outputs `Kljyfwa tl.`,
+so to decrypt it:
+```shell
+caesar -7 text "Kljyfwa tl."
+```
+Which will give `Decrypt me.`
+Same for the decrypting a negative rotation encryption, e.g. to decrypt a -12 rotation rotate by 12 to decrypt.
