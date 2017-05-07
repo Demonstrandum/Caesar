@@ -58,6 +58,7 @@ string rot(int n, string str) {
 int main(int argc, char** argv) {
   if (argc < 4) {
     cout << "Please supply a valid number of arguments." << endl;
+    return 1;
   }
   string content;
   string strRotation = argv[1];
