@@ -14,12 +14,12 @@ bool IsInString(string str, char element) {
 }
 
 string rot(int n, string str) {
-  if (n > 26 || n < -26) {
+  if (n > 26 || n < -26)
     return "\nRotation integer out of range!\nPlease choose a number between -26 and 26!\n";
-  }
-  if (n < 0) {
+
+  if (n < 0)
     n += 26;
-  }
+
   string alph = "abcdefghijklmnopqrstuvwxyz";
   string ciph = alph;
   rotate(ciph.begin(), ciph.begin() + n, ciph.end());
@@ -63,10 +63,10 @@ int main(int argc, char** argv) {
   string content;
   string strRotation = argv[1];
   int rotation = atoi(strRotation.c_str());
-  if (string(argv[2]) == string("text")) {
+  if (string(argv[2]) == "text") {
     content = string(argv[3]);
   }
-  else if (string(argv[2]) == string("file")) {
+  else if (string(argv[2]) == "file") {
     string fileName = string(argv[3]);
     ifstream ifs(fileName);
     content.assign( (istreambuf_iterator<char>(ifs) ),
