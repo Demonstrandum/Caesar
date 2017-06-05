@@ -3,17 +3,7 @@
 #include <algorithm>
 #include <sstream>
 #include <iomanip>
-
 using namespace std;
-
-bool IsInString(string str, char element) {
-  for(unsigned int i = 0; i < str.length(); i++) {
-     if(str[i] == element){
-         return true;
-     }
-  }
-  return false;
-}
 
 string rot(int n, string str) {
   if (n > 26 || n < -26)
@@ -35,7 +25,7 @@ string rot(int n, string str) {
   unsigned int j = 0;
 
   while (i < str.length()) {
-    if (IsInString(alph, str[i]) || IsInString(upperAlph, str[i])) {
+    if (alph.find(str[i]) != std::string::npos || upperAlph.find(str[i]) != std::string::npos) {
       if (str[i] == alph[j]) {
         str[i] = ciph[j];
         i++;
@@ -70,8 +60,10 @@ int main(int argc, char** argv) {
   else if (string(argv[2]) == "file") {
     string fileName = string(argv[3]);
     ifstream ifs(fileName);
-    content.assign( (istreambuf_iterator<char>(ifs) ),
-                    (istreambuf_iterator<char>()    ) );
+    content.assign(
+      istreambuf_iterator<char>(ifs),
+      istreambuf_iterator<char>()
+    );
   }
   else {
     cout << "Please choose a way of retrieving the input (text or file)." << endl;
@@ -82,8 +74,8 @@ int main(int argc, char** argv) {
   if (strRotation == "bruteforce" || strRotation == "brute" || strRotation == "force") {
     for (unsigned int i = 25; i >= 1; i--) {
       stringstream list;
-      list << setfill('0') << setw(2) << -(i - 26); // Adds padding with '0's, e.g. {5 => 05, 14 => 14} etc...
-      cout << list.str() << " => " << rot(i, content) << endl; // ^^^ (i - 26) * -1 to reverse the numbers because brute force decrypts, showing the encryption number as opposed to the decryption number
+      list << setfill('0') << setw(2) << 26 - i; // Adds padding with '0's, e.g. {5 => 05, 14 => 14} etc...
+      cout << list.str() << ": " << rot(i, content) << endl; // 26 - i to reverse the numbers because brute force decrypts, showing the encryption number as opposed to the decryption number
     }
     return 0;
   }

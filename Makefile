@@ -1,5 +1,5 @@
 CC = g++
-CFLAGS  = -g -Wall
+CFLAGS  = -g -Wall -O3
 TARGET = caesar
 DEST = /usr/local/bin
 all: $(TARGET)
