@@ -71,31 +71,31 @@ caesar bruteforce text "Lipps Xlivi"
 ```
 which produces a list like this:
 ```
-01 => Khoor Wkhuh
-02 => Jgnnq Vjgtg
-03 => Ifmmp Uifsf
-04 => Hello There
-05 => Gdkkn Sgdqd
-06 => Fcjjm Rfcpc
-07 => Ebiil Qebob
-08 => Dahhk Pdana
-09 => Czggj Oczmz
-10 => Byffi Nbyly
-11 => Axeeh Maxkx
-12 => Zwddg Lzwjw
-13 => Yvccf Kyviv
-14 => Xubbe Jxuhu
-15 => Wtaad Iwtgt
-16 => Vszzc Hvsfs
-17 => Uryyb Gurer
-18 => Tqxxa Ftqdq
-19 => Spwwz Espcp
-20 => Rovvy Drobo
-21 => Qnuux Cqnan
-22 => Pmttw Bpmzm
-23 => Olssv Aolyl
-24 => Nkrru Znkxk
-25 => Mjqqt Ymjwj
+01: Khoor Wkhuh
+02: Jgnnq Vjgtg
+03: Ifmmp Uifsf
+04: Hello There
+05: Gdkkn Sgdqd
+06: Fcjjm Rfcpc
+07: Ebiil Qebob
+08: Dahhk Pdana
+09: Czggj Oczmz
+10: Byffi Nbyly
+11: Axeeh Maxkx
+12: Zwddg Lzwjw
+13: Yvccf Kyviv
+14: Xubbe Jxuhu
+15: Wtaad Iwtgt
+16: Vszzc Hvsfs
+17: Uryyb Gurer
+18: Tqxxa Ftqdq
+19: Spwwz Espcp
+20: Rovvy Drobo
+21: Qnuux Cqnan
+22: Pmttw Bpmzm
+23: Olssv Aolyl
+24: Nkrru Znkxk
+25: Mjqqt Ymjwj
 ```
 Here we can see 04 goes to 'Hello There', meaning it has been encrypted by a rotation of 4.
 
